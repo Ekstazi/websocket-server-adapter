@@ -1,0 +1,55 @@
+{
+  "name": "ekstazi/websocket-server-adapter",
+  "description": "Async WebSocket server adapter for Amp based on different implementations.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Maxim Furtuna",
+      "email": "ekstazyst@gmail.com"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/ekstazi/websocket-server-adapter/issues"
+  },
+  "keywords": [
+    "async",
+    "non-blocking",
+    "websocket",
+    "server",
+    "http",
+    "amp",
+    "amphp"
+  ],
+  "require": {
+    "php": ">=7.2",
+    "ext-pcntl": "*",
+    "amphp/amp": "^2.2",
+    "amphp/byte-stream": "^1",
+    "psr/log": "^1.1"
+  },
+  "require-dev": {
+    "amphp/php-cs-fixer-config": "dev-master",
+    "amphp/phpunit-util": "^1.1",
+    "phpunit/phpunit": "^8 || ^7"
+  },
+  "minimum-stability": "RC",
+  "autoload": {
+    "psr-4": {
+      "ekstazi\\websocket\\server\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ekstazi\\websocket\\server\\test\\": "test"
+    }
+  },
+  "suggest": {
+    "ekstazi/websocket-server-adapter-implementation": "For websocket server implementation",
+    "ekstazi/websocket-server-adapter-amphp": "For amphp websocket-server implementation"
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "phpdbg -qrr vendor/bin/phpunit --coverage-text --coverage-clover build/logs/clover.xml",
+    "lint": "php vendor/bin/php-cs-fixer --diff  -v fix"
+  }
+}
