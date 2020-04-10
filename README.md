@@ -1,5 +1,11 @@
 # websocket-server-adapter
 Websocket server is set of interfaces that provide webaocket server for amphp
+# Installation
+This package can be installed as a Composer dependency.
+
+`composer require ekstazi/websocket-server-adapter`
+# Requirements
+PHP 7.2+
 # Interfaces
  Interfaces provided
  ## `interface ServerFactory`
